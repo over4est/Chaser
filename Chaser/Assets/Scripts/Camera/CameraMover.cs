@@ -6,11 +6,6 @@ public class CameraMover : MonoBehaviour
     [SerializeField] private Vector3 _offset;
     [SerializeField, Range(0, 1)] private float _smoothSpeed;
 
-    private void Start()
-    {
-        Application.targetFrameRate = 60;
-    }
-
     private void LateUpdate()
     {
         Vector3 targetPosition = _player.position + _offset;
